@@ -1,0 +1,42 @@
+ 1) STYLE GUIDE (SCSS)
+
+ styles/
+        |-- abstracts/        // Variables, Mixins, Functions
+        |-- base/             // Reset, Typography, General styles
+        |-- components/       // SCSS for Angular Components
+        |-- layouts/          // Layout SCSS (Grids, Containers)
+        |-- pages/            // Page-specific SCSS
+        |-- themes/           // Color schemes, Dark/Light mode
+        |-- utils/            // Helpers, Reusable mixins, etc.
+        |-- main.scss         // Entry point
+ 
+ a) Use Variables and Mixins in abstracts/
+    Variables and mixins are the backbone of DRY (Don’t Repeat Yourself) principles in SCSS. 
+    To prevent magic numbers and hardcoded values, define all reusable values in the abstracts/ folder.
+
+            Best Practice Tip:
+            Use a Color Palette: Maintain a consistent color palette for your application to ensure a cohesive UI design. 
+            Define primary, secondary, and neutral colors in your variables file.
+
+ b) Write Modular Component SCSS 
+
+    Each component should have its own SCSS file for better encapsulation. SCSS files related to a component should be self-contained, 
+    ensuring that the styles are scoped to the component itself.
+
+    Example of a component SCSS (button.component.scss):
+
+    Best Practice Tip:
+    Avoid Global Styles in Component Files: Keep component styles scoped to the component itself. 
+    If you need global styles (e.g., for typography), place them in a separate base file (base/_typography.scss) and import it where needed.
+
+ c) Use Partials and Import Only What You Need
+  
+    SCSS partials allow you to split your styles into smaller, manageable pieces. 
+    When writing a component’s SCSS, only import the specific files that are necessary for that component, which helps with build performance.
+
+        For example, in your main.scss (the entry point for your styles), you can import only the files that you need:  
+
+    Best Practice Tip:
+    Use the @use rule instead of @import: Starting with SCSS 1.23, @use is the preferred method to import files, as it avoids global scope pollution and improves performance.
+
+d) Organize Responsive Styles
