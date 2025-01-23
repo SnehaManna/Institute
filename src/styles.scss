@@ -1,8 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/abstracts/Variables.scss';
 @import './styles/abstracts/Mixins.scss';
+@import './styles/base/Typography.scss';
 
 
+html,
+body {
+  height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family:$bodyfont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  color: $primary-text-color;
+  background: $bg-color;
+  @include para-text;
+ 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $primary-hover;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primary-text-color;
+  padding: 0;
+}
+
+button{
+  cursor: pointer;
+}
