@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TODO } from '../todo.model';
 
-const TODO_LIST : TODO[] = [
+export const TODO_LIST : TODO[] = [
   {id:1, title:"Node", isCompleted : false},
   {id:2, title:"Angular", isCompleted : false},
   {id:3, title:"React", isCompleted : false},

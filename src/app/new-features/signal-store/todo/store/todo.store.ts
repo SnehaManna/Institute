@@ -1,7 +1,7 @@
-import { patchState, signalStore, withMethods, withState } from "@ngrx/signals";
+import { patchState, signalStore, withHooks, withMethods, withState } from "@ngrx/signals";
 import { TODO } from "../todo.model";
 import { inject } from "@angular/core";
-import { TodoServiceService } from "../service/todo-service.service";
+import { TODO_LIST, TodoServiceService } from "../service/todo-service.service";
 
 export type TODO_FILTER = 'all' | 'pending' | 'completed'
 
@@ -26,5 +26,14 @@ export const TODO_STORE = signalStore(
             let todos = await todoService.getAllTodos();
             patchState(store,{isLoading:false, todos})
         }
-    }))
+    })),
+    withHooks({
+        onInit(store) {
+            console.log("STORE INIT ", store)
+
+            // patchState(store,{todos:TODO_LIST})
+
+            store.getAllTodos()
+        },
+    })
 )

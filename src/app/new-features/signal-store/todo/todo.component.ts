@@ -12,7 +12,7 @@ export class TodoComponent implements OnInit {
   todoStore = inject(TODO_STORE);
 
   ngOnInit(): void {
-      this.loadTodos();
+      // this.loadTodos();
   }
 
   async loadTodos(){
