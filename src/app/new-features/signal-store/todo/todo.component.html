@@ -1,0 +1,7 @@
+<div>
+    <ul>
+        @for (item of todoStore.todos(); track item.id) {
+            <li>{{item.title}} - {{item.isCompleted}}</li>
+        }
+    </ul>
+</div>

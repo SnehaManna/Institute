@@ -1,0 +1,7 @@
+<div>
+    {{ counterStore.count() }} / {{counterStore.doubleVal()}}
+</div>
+
+<button class="btn btn-success" (click)="counterStore.inr()">+</button>
+<button class="btn btn-info" (click)="counterStore.dec()">-</button>
+<button class="btn btn-info" (click)="counterStore.mul(6)">*</button>
