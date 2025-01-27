@@ -1,0 +1,65 @@
+<div class="loginPg">
+    <div class="loginLft">
+        <div class="auth-box">
+          <h1>Creat your account</h1>
+          <p>Please enter your details</p>
+          <div class="row">
+            <div class="col-lg-6">
+                <div class="form-field">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Name</mat-label>
+                      <input matInput type="text" />
+                    </mat-form-field>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-field">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Email</mat-label>
+                      <input matInput type="email" />
+                    </mat-form-field>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-field">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Address</mat-label>
+                      <input matInput type="text" />
+                    </mat-form-field>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-field">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Phone no</mat-label>
+                      <input matInput type="tel" />
+                    </mat-form-field>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-field">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput type="password" />
+                    </mat-form-field>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-field">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Comfirm Password</mat-label>
+                      <input matInput type="password" />
+                    </mat-form-field>
+                  </div>
+            </div>
+          </div>
+          
+         
+          <div class="form-field">
+            <app-button [btnType]="buttonType" [btnLabel]="buttonLabel"></app-button>
+          </div>
+        </div>
+        <hr>
+        <p class="signupLink">Already have an account? <a routerLink="/login">Sign in</a></p>
+      </div>
+  </div>

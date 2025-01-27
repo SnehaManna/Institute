@@ -1,23 +1,31 @@
-<div class="login">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
+<div class="loginPg">
+    <div class="loginLft">
         <div class="auth-box">
-          <h1>Sign in to Institute portal</h1>
+          <h1>Welcome back</h1>
+          <p>Please enter your details</p>
           <div class="form-field">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
               <input matInput type="email" />
             </mat-form-field>
           </div>
           <div class="form-field">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
               <input matInput type="password" />
             </mat-form-field>
           </div>
+          <div class="form-field">
+            <div class="rememberForgot">
+              <mat-checkbox >Remember Me</mat-checkbox>
+              <a routerLink="/">Forgot Password</a>
+            </div>  
+          </div>
+          <div class="form-field">
+            <app-button [btnType]="buttonType" [btnLabel]="buttonLabel"></app-button>
+          </div>
         </div>
+        <hr>
+        <p class="signupLink">Don't have an account? <a routerLink="/signup">Sign up</a></p>
       </div>
-    </div>
   </div>
-</div>

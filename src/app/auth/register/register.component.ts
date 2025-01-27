@@ -5,16 +5,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ButtonComponent } from '../../shared/ui/button/button.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { RouterModule } from '@angular/router';
-@Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule,MatFormFieldModule, MatInputModule, MatSelectModule, ButtonComponent,MatCheckboxModule, RouterModule ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
-})
-export class LoginComponent {
 
-  buttonType:string = 'primary';
-  buttonLabel:string = 'Sign in'
+@Component({
+  selector: 'app-register',
+  standalone: true,
+  imports: [CommonModule,MatSelectModule,MatInputModule, MatFormFieldModule,ButtonComponent,MatCheckboxModule ],
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.scss'
+})
+export class RegisterComponent {
+buttonType:string = 'primary';
+  buttonLabel:string = 'Sign up'
 }
