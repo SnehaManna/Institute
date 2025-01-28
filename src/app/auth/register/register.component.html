@@ -3,12 +3,14 @@
         <div class="auth-box">
           <h1>Creat your account</h1>
           <p>Please enter your details</p>
-          <div class="row">
+          <form [formGroup]="signupForm">
+            <div class="row">
             <div class="col-lg-6">
                 <div class="form-field">
                     <mat-form-field appearance="outline">
                       <mat-label>Name</mat-label>
-                      <input matInput type="text" />
+                      <input matInput type="text" formControlName="name"/>
+                      <mat-error *ngIf="nameError && nameError.invalid && nameError.touched">Enter valid name</mat-error>
                     </mat-form-field>
                   </div>
             </div>
@@ -16,7 +18,8 @@
                 <div class="form-field">
                     <mat-form-field appearance="outline">
                       <mat-label>Email</mat-label>
-                      <input matInput type="email" />
+                      <input matInput type="email" formControlName="email" />
+                      <mat-error *ngIf="emailError && emailError.invalid && emailError.touched">Enter valid email</mat-error>
                     </mat-form-field>
                   </div>
             </div>
@@ -24,7 +27,7 @@
                 <div class="form-field">
                     <mat-form-field appearance="outline">
                       <mat-label>Address</mat-label>
-                      <input matInput type="text" />
+                      <input matInput type="text" formControlName="address"/>
                     </mat-form-field>
                   </div>
             </div>
@@ -32,7 +35,7 @@
                 <div class="form-field">
                     <mat-form-field appearance="outline">
                       <mat-label>Phone no</mat-label>
-                      <input matInput type="tel" />
+                      <input matInput type="tel" formControlName="phone" />
                     </mat-form-field>
                   </div>
             </div>
@@ -40,7 +43,7 @@
                 <div class="form-field">
                     <mat-form-field appearance="outline">
                       <mat-label>Password</mat-label>
-                      <input matInput type="password" />
+                      <input matInput type="password" formControlName="password" />
                     </mat-form-field>
                   </div>
             </div>
@@ -48,18 +51,21 @@
                 <div class="form-field">
                     <mat-form-field appearance="outline">
                       <mat-label>Comfirm Password</mat-label>
-                      <input matInput type="password" />
+                      <input matInput type="password" formControlName="confirmpassword" />
                     </mat-form-field>
                   </div>
             </div>
           </div>
+          <div class="form-field">
+            <app-button [btnType]="buttonType" [btnLabel]="buttonLabel" (click)="submit()" ></app-button>
+          </div>
+          </form>
+          
           
          
-          <div class="form-field">
-            <app-button [btnType]="buttonType" [btnLabel]="buttonLabel"></app-button>
-          </div>
+        
         </div>
         <hr>
-        <p class="signupLink">Already have an account? <a routerLink="/login">Sign in</a></p>
+        <p class="signupLink">Already have an account? <a routerLink="/login">Sign in </a></p>
       </div>
   </div>
