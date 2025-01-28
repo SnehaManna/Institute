@@ -3,16 +3,22 @@
         <div class="auth-box">
           <h1>Welcome back</h1>
           <p>Please enter your details</p>
+          <form [formGroup]="loginForm">
           <div class="form-field">
             <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
-              <input matInput type="email" />
+              <input matInput type="email" formControlName="email" placeholder="Email" />
+              <!-- <span class="text-danger"
+                                *ngIf="loginForm.email.touched && loginForm.email.errors?.required">
+                                Name is required
+                            </span> -->
+                           
             </mat-form-field>
           </div>
           <div class="form-field">
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
-              <input matInput type="password" />
+              <input matInput type="password" formControlName="password" placeholder="Password" />
             </mat-form-field>
           </div>
           <div class="form-field">
@@ -22,8 +28,9 @@
             </div>  
           </div>
           <div class="form-field">
-            <app-button [btnType]="buttonType" [btnLabel]="buttonLabel"></app-button>
+            <app-button [btnType]="buttonType" [btnLabel]="buttonLabel" (getValue)="submit()"></app-button>
           </div>
+          </form>
         </div>
         <hr>
         <p class="signupLink">Don't have an account? <a routerLink="/signup">Sign up</a></p>

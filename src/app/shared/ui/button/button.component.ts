@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -11,5 +11,9 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
 @Input() btnLabel!: string;
 @Input() btnType!: string;
-@Input() curveBtn!:boolean
+@Input() curveBtn!:boolean;
+@Output() getValue = new EventEmitter;
+submit(){
+  this.getValue.emit()
+}
 }
