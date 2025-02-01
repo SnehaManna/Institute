@@ -25,4 +25,11 @@
             text-decoration: underline;
         }
     }
+    ::ng-deep{
+        .mat-mdc-tab-body-content{
+            overflow: hidden;
+            padding-top: 25px;
+        }
+       
+    }
 }
