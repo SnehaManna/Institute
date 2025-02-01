@@ -1,0 +1,28 @@
+.loginPg{
+    height: 100dvh;
+    padding: 100px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth-box{
+        max-width: 600px;
+        margin: 0 auto;
+        mat-form-field{
+            width: 100%;
+        }
+        .rememberForgot{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                text-decoration: underline;
+            }
+        }
+       
+    }
+    .signupLink{
+        a{
+            text-decoration: underline;
+        }
+    }
+}

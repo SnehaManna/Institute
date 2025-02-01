@@ -1,2 +1,2 @@
-<button type="button" [ngClass]="[(btnType === 'secondary' ? 'secondary-btn' : 'primary-btn'),(curveBtn ? 'buttonCurve': '')]">{{btnLabel}}</button>
+<button type="button" [ngClass]="[(btnType === 'secondary' ? 'secondary-btn' : 'primary-btn'),(curveBtn ? 'buttonCurve': '')]" (click)="submit()">{{btnLabel}}</button>
 

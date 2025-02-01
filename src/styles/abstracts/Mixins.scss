@@ -6,7 +6,7 @@
   align-items: center;
 }
 @mixin para-text {
-  color: $secondary-text-colo;
+  color: $secondary-text-color;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -22,9 +22,10 @@
     color: $bg-color;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
-    padding: 8px 15px;
+    padding:12px 18px;
+    min-width: 100px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
