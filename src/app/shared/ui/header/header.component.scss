@@ -1,0 +1,32 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 15px 0;
+    .headerInner{
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+        .logo{
+            a{
+                font-weight: 700;
+            }
+        }
+        .menu{
+            ul{
+                display: flex;
+                li{
+                    margin-right: 15px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+}
